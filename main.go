@@ -4,12 +4,11 @@ import "fmt"
 
 func main() {
 
-	slc1 := []int{1, 2, 3}
-	fmt.Printf("%p\n", slc1)
-	slc2 := []int{4, 5, 6}
+	slc1 := []int{1, 2, 3, 4}
+	fmt.Printf("%p : len : %d // cap : %d \n", slc1, len(slc1), cap(slc1))
 
-	slc1 = append(slc1[:2], slc2[1:]...)
-	fmt.Printf("%p\n", slc1)
+	slc1 = append(slc1[:2], slc1[3:]...)
+	fmt.Printf("%p : len : %d // cap : %d \n", slc1, len(slc1), cap(slc1))
 	fmt.Println(slc1)
 }
 
