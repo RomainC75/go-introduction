@@ -3,15 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	matrix := [4][4]int{}
-	i, j := 0, len(matrix[0])-1
-	fmt.Println(i, j)
-	for i < len(matrix) {
-		matrix[i][j] = 1
-		i++
-		j--
-	}
-	displayMatrix(matrix)
+	arr := [5]int{1, 2, 3, 4, 5}
+	slc := arr[1:]
+	fmt.Println(arr)
+	fmt.Printf("SLC : value : %v // len : %v // cap : %v\n", slc, len(slc), cap(slc))
+
+	slc[1] = 34
+	fmt.Println(arr)
+	fmt.Printf("SLC : value : %v // len : %v // cap : %v\n", slc, len(slc), cap(slc))
+
+	slc2 := slc[2:4]
+	slc2[0] = 48
+	fmt.Printf("SLC2 : value : %v // len : %v // cap : %v\n", slc2, len(slc2), cap(slc2))
+	fmt.Println("final", arr)
 }
 
 func displayMatrix(matrix [4][4]int) {
