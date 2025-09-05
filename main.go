@@ -9,13 +9,13 @@ func main() {
 	for i := 0; i < 1_000_000; i++ {
 		slc = append(slc, 0)
 		if i < 100 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v\n", i, len(slc), cap(slc))
+			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
 		}
 		if i < 10_000 && i%100 == 0 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v\n", i, len(slc), cap(slc))
+			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
 		}
 		if i%10_000 == 0 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v\n", i, len(slc), cap(slc))
+			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
 		}
 	}
 }
