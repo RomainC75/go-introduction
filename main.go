@@ -3,34 +3,19 @@ package main
 import "fmt"
 
 func main() {
-	arr := [50]int{}
-
-	foundPrime := 0
-	num := 0
-
-	for foundPrime < 50 {
-		if isPrime(num) {
-			arr[foundPrime] = num
-			foundPrime++
-		}
-		num++
+	matrix := [4][4]int{}
+	i, j := 0, len(matrix[0])-1
+	fmt.Println(i, j)
+	for i < len(matrix) {
+		matrix[i][j] = 1
+		i++
+		j--
 	}
-	fmt.Println(arr)
-
-	fmt.Println("result : ")
-	for i := 0; i < 50; i += 2 {
-		fmt.Print(arr[i], "  ")
-	}
+	displayMatrix(matrix)
 }
 
-func isPrime(num int) bool {
-	if num == 0 || num == 1 {
-		return false
+func displayMatrix(matrix [4][4]int) {
+	for i := 0; i < len(matrix); i++ {
+		fmt.Println(matrix[i])
 	}
-	for i := 2; i < num; i++ {
-		if num%i == 0 {
-			return false
-		}
-	}
-	return true
 }
