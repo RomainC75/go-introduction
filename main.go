@@ -3,21 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	slc := make([]int, 0, 0)
-	// fmt.Printf("SLC : value : %d // len : %v // cap : %v\n", i, len(slc), cap(slc))
 
-	for i := 0; i < 1_000_000; i++ {
-		slc = append(slc, 0)
-		if i < 100 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
-		}
-		if i < 10_000 && i%100 == 0 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
-		}
-		if i%10_000 == 0 {
-			fmt.Printf("SLC : value : %d // len : %v // cap : %v // address : %p \n", i, len(slc), cap(slc), slc)
-		}
-	}
+	slc1 := []int{1, 2, 3}
+	fmt.Printf("%p\n", slc1)
+	slc2 := []int{4, 5, 6}
+
+	slc1 = append(slc1[:2], slc2[1:]...)
+	fmt.Printf("%p\n", slc1)
+	fmt.Println(slc1)
 }
 
 func displayMatrix(matrix [4][4]int) {
