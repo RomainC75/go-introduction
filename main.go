@@ -1,7 +1,10 @@
 package main
 
-import "sandbox/exercices"
+import (
+	"sandbox/exercices"
+)
 
 func main() {
-	exercices.Occurences()
+	exercices.RunFunction1()
+
 }
