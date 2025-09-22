@@ -14,3 +14,5 @@
 7 - fonctions : https://docs.google.com/presentation/d/1AuskmVhkvKAU5JXOv0VYO0mAOJcVEsaAprZ0iz2hUqU/edit?usp=sharing
 
 8 - pointer : https://docs.google.com/presentation/d/1LxukJnxpCvspII20i3SvpPxpKDdFk-nngZCUtvAP7ws/edit?usp=sharing
+
+9 - struct, method, interface : https://docs.google.com/presentation/d/1GMrh1sRkr84iS-nK2bksJYFvlr9LcWEgVf30VUghS7A/edit?usp=sharing
