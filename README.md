@@ -10,3 +10,5 @@
 5 - slices : https://docs.google.com/presentation/d/1eZByZIEg-2raMo1ZWOi-ihGbcpSUJt6FiMvVoKcKG-8/edit?usp=sharing
 
 6 - maps : https://docs.google.com/presentation/d/1eHdV5Ca3fjIcGuUYuCfgQEr0Bq8lDehAo63A72Bzeoc/edit?usp=sharing
+
+7 - fonctions : https://docs.google.com/presentation/d/1AuskmVhkvKAU5JXOv0VYO0mAOJcVEsaAprZ0iz2hUqU/edit?usp=sharing
