@@ -1,20 +1,17 @@
 package main
 
-import (
-	"fmt"
-	"slices"
-)
+import "fmt"
 
 func main() {
-	slc1 := []int{1, 4, 6, 23, 54, 100, 110}
-	slc2 := []int{3, 6, 32, 115, 342}
-	res := make([]int, 0, len(slc1)+len(slc2))
-	res = append(res, slc1...)
-	res = append(res, slc2...)
+	myMap := make(map[string]string)
 
-	slices.SortFunc(res, func(a, b int) int {
-		return a - b
-	})
+	myMap["name"] = "John"
+	myMap["names"] = "Johné"
+	myMap["namess"] = "John2"
+	myMap["namesd"] = "John3"
+	myMap["namesf"] = "John4"
 
-	fmt.Println(res)
+	for key, values := range myMap {
+		fmt.Println(key, values)
+	}
 }
