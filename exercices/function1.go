@@ -12,8 +12,12 @@ func RunFunction1() {
 	fmt.Println(res)
 }
 
-func filter(slc []int, fn func(int) bool) []int {
-	res := make([]int, 0, len(slc))
+type Int interface {
+	int8 | uint | int
+}
+
+func filter[T Int](slc []T, fn func(T) bool) []T {
+	res := make([]T, 0, len(slc))
 	for _, value := range slc {
 		if fn(value) {
 			res = append(res, value)
