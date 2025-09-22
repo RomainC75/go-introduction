@@ -3,19 +3,28 @@ package main
 import "fmt"
 
 func main() {
+	slc1 := []int{1, 4, 6, 23, 54, 100, 110}
+	slc2 := []int{3, 6, 32, 115, 342}
+	res := make([]int, 0, len(slc1)+len(slc2))
 
-	slc1 := []int{1, 2, 3, 4, 5}
-	slc2 := make([]int, 4, 5)
-	fmt.Printf("slc1 : %p / len : %v / cap : %v \n", slc1, len(slc1), cap(slc1))
-	fmt.Printf("PRE slc2 : %p / len : %v / cap : %v \n", slc2, len(slc2), cap(slc2))
+	i1 := 0
+	i2 := 0
 
-	nbCopied := copy(slc2, slc1)
-	fmt.Println("copied : ", nbCopied)
-	fmt.Printf("POST slc2 : %p / len : %v / cap : %v \n", slc2, len(slc2), cap(slc2))
-}
-
-func displayMatrix(matrix [4][4]int) {
-	for i := 0; i < len(matrix); i++ {
-		fmt.Println(matrix[i])
+	for i1 < len(slc1)-1 && i2 < len(slc2)-1 {
+		if slc1[i1] < slc2[i2] {
+			res = append(res, slc1[i1])
+			i1++
+		} else {
+			res = append(res, slc2[i2])
+			i2++
+		}
 	}
+
+	if i1 < len(slc1)-1 {
+		res = append(res, slc1[i1:]...)
+	}
+	if i2 < len(slc2)-1 {
+		res = append(res, slc2[i2:]...)
+	}
+	fmt.Println(res)
 }
